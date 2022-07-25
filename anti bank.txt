@@ -1,0 +1,28 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Script Hub -- By Retro", "BloodTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("StupidShit")
+Section:NewButton("Please Join My Discord", "Press To Copy Invitation to Clipboard", function ()
+    setclipboard('https://discord.gg/Hfy2KXvu')
+end)
+
+Section:NewSlider("WalkSpeed", "More Speed", 500, 25, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "Jump Higher", 500, 50, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewKeybind("Activate/Deactivate GUI", "You Can Customize To The Key You Want", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+
+local Tab = Window:NewTab("Pet Sim X")
+local Section = Tab:NewSection("Press To Execute Script")
+Section:NewButton("Load Pet Sim X GUI", "load gui", function ()
+ wait (25)
+    _G.License = "634b7f97e8c84f61b4e6"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-Scripts/psxsc/main/script.lua"))()
+end)
